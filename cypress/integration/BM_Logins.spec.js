@@ -12,8 +12,8 @@ describe('BM Login Test Suite', () => {
             .clear()
             .type('fakepassword')
         // clic bouton login
-        // cy.xpath('//*[@id="__layout"]/div/div[3]/div/div/div[2]/section[1]/div/form/div[4]/button').click()
-        cy.contains('Welcome Back!').click()
+        cy.xpath('//*[@id="__layout"]/div/div[3]/div/div/div[2]/section[1]/div/form/div[4]/button').click()
+        // cy.contains('Welcome Back!').click()
         // test message erreur login
         cy.xpath('//*[@id="__layout"]/div/div[3]/div/div/div[2]/section[1]/div/form/p').should('be.visible')
         cy.wait(1000)
